@@ -17,6 +17,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get infant => "Infant";
 
   @override
+  String get ageOfAdult => "> 11 years old";
+
+  @override
+  String get ageOfChild => "2-11 years old";
+
+  @override
+  String get ageOfInfant => "< 2 years old";
+
+  @override
   String get connectionTimeoutException =>
       "Connection timeout error, please check your network.";
 
@@ -42,6 +51,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get unknownException => "Something went wrong.";
+
+  @override
+  String get cancel => "Huỷ bỏ";
+
+  @override
+  String get apply => "Áp dụng";
 
   @override
   String get login => "Login";

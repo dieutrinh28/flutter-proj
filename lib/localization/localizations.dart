@@ -38,6 +38,12 @@ abstract class AppLocalizations {
 
   String get infant;
 
+  String get ageOfAdult;
+
+  String get ageOfChild;
+
+  String get ageOfInfant;
+
   String get connectionTimeoutException;
 
   String get sendTimeoutException;
@@ -53,6 +59,10 @@ abstract class AppLocalizations {
   String get connectionErrorException;
 
   String get unknownException;
+
+  String get cancel;
+
+  String get apply;
 
   String get login;
 

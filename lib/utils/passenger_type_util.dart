@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_proj/constants/colors.dart';
 import 'package:flutter_proj/localization/localizations.dart';
 
 enum PassengerTypeEnum { adult, child, infant }
@@ -48,5 +50,34 @@ class PassengerTypeUtil {
       }
     }
     return null;
+  }
+
+  static String? getValue(
+    PassengerTypeEnum? passengerTypeEnum,
+    AppLocalizations appLocalizations,
+  ) {
+    switch (passengerTypeEnum) {
+      case PassengerTypeEnum.adult:
+        return appLocalizations.ageOfAdult;
+      case PassengerTypeEnum.child:
+        return appLocalizations.ageOfChild;
+      case PassengerTypeEnum.infant:
+        return appLocalizations.ageOfInfant;
+      default:
+        return null;
+    }
+  }
+
+  static Color? getColor(PassengerTypeEnum? passengerTypeEnum) {
+    switch (passengerTypeEnum) {
+      case PassengerTypeEnum.adult:
+        return AppColors.success600;
+      case PassengerTypeEnum.child:
+        return AppColors.indigo600;
+      case PassengerTypeEnum.infant:
+        return AppColors.error600;
+      default:
+        return null;
+    }
   }
 }

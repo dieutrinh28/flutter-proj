@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_proj/constants/dimens.dart';
+import 'package:flutter_proj/extensions/list.dart';
 import 'package:flutter_proj/routing/route_constants.dart';
 import 'package:flutter_proj/widgets/common/primary_button.dart';
+import 'package:flutter_proj/widgets/common/secondary_button.dart';
 import 'package:go_router/go_router.dart';
 
 class SocScreen extends StatelessWidget {
@@ -10,27 +13,37 @@ class SocScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            PrimaryButton(
-                text: "Flight",
+        child: Container(
+          padding: const EdgeInsets.all(AppDimens.appPaddingNormal),
+          child: Column(
+            children: [
+              PrimaryButton(
+                  text: "Flight",
+                  onTap: () {
+                    GoRouter.of(context)
+                        .pushNamed(RouteConstants.searchFlightResult.name);
+                  }),
+              PrimaryButton(
+                  text: "Policy Html",
+                  onTap: () {
+                    GoRouter.of(context)
+                        .pushNamed(RouteConstants.policyHtml.name);
+                  }),
+              PrimaryButton(
+                  text: "Policy Web View",
+                  onTap: () {
+                    GoRouter.of(context)
+                        .pushNamed(RouteConstants.policyWebView.name);
+                  }),
+              SecondaryButton(
+                text: "Passenger information",
                 onTap: () {
                   GoRouter.of(context)
-                      .pushNamed(RouteConstants.searchFlightResult.name);
-                }),
-            PrimaryButton(
-                text: "Policy Html",
-                onTap: () {
-                  GoRouter.of(context)
-                      .pushNamed(RouteConstants.policyHtml.name);
-                }),
-            PrimaryButton(
-                text: "Policy Web View",
-                onTap: () {
-                  GoRouter.of(context)
-                      .pushNamed(RouteConstants.policyWebView.name);
-                }),
-          ],
+                      .pushNamed(RouteConstants.passengerInformation.name);
+                },
+              ),
+            ].separated(const SizedBox(height: AppDimens.separatedNormal)),
+          ),
         ),
       ),
     );

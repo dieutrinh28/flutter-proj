@@ -17,6 +17,15 @@ class AppLocalizationsVi extends AppLocalizations {
   String get infant => "Trẻ sơ sinh";
 
   @override
+  String get ageOfAdult => "> 11 tuổi";
+
+  @override
+  String get ageOfChild => "2-11 tuổi";
+
+  @override
+  String get ageOfInfant => "< 2 tuổi";
+
+  @override
   String get connectionTimeoutException =>
       "Thời gian kết nối đã hết, vui lòng kiểm tra mạng của bạn.";
 
@@ -42,6 +51,12 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get unknownException => "Đã xảy ra lỗi.";
+
+  @override
+  String get cancel => "Cancel";
+
+  @override
+  String get apply => "Apply";
 
   @override
   String get login => "Đăng nhập";

@@ -1,38 +1,16 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_proj/constants/colors.dart';
+import 'package:flutter_proj/widgets/common/core_button.dart';
 
-class PrimaryButton extends StatelessWidget {
-  final String text;
-  final void Function()? onTap;
-
+class PrimaryButton extends CoreButton {
   const PrimaryButton({
     super.key,
-    required this.text,
-    required this.onTap,
+    required super.text,
+    super.onTap,
+    super.bgColor = AppColors.brandPrimaryBase,
+    super.textColor = AppColors.baseWhite,
+    super.iconColor = AppColors.baseWhite,
+    super.borderColor = AppColors.brandPrimaryBase,
+    super.leadingIcon,
+    super.trailingIcon,
   });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.only(left: 20),
-        height: 44,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: AppColors.brandPrimaryBase,
-          borderRadius: BorderRadius.circular(4),
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
-  }
 }

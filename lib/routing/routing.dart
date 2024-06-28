@@ -10,6 +10,7 @@ import 'package:flutter_proj/screens/home/screen.dart';
 import 'package:flutter_proj/screens/login/screen.dart';
 import 'package:flutter_proj/screens/my_page/screen.dart';
 import 'package:flutter_proj/screens/news/screen.dart';
+import 'package:flutter_proj/screens/soc/flight/passenger_information/screen.dart';
 import 'package:flutter_proj/screens/soc/flight/search_flight_result/cubit/search_flight_cubit.dart';
 import 'package:flutter_proj/screens/soc/flight/search_flight_result/screen.dart';
 import 'package:flutter_proj/screens/soc/policy_html/screen.dart';
@@ -88,6 +89,11 @@ class AppRouter {
                   path: RouteConstants.policyWebView.path,
                   name: RouteConstants.policyWebView.name,
                   builder: (context, state) => const PolicyWebView(),
+                ),
+                GoRoute(
+                  path: RouteConstants.passengerInformation.path,
+                  name: RouteConstants.passengerInformation.name,
+                  builder: (context, state) => const PassengerInformationScreen(),
                 ),
               ]),
         ]),
