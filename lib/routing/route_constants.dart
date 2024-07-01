@@ -17,8 +17,12 @@ class RouteConstants {
   static const RouteModel friendList = RouteModel(name: "friendList", path: "friendList");
 
   // flight
-  static const RouteModel searchFlightResult = RouteModel(name: "searchFlightResult", path: "searchFlightResult");
+  static const RouteModel flightHome = RouteModel(name: "flightHome", path: "flightHome");
+  static const RouteModel searchResult = RouteModel(name: "searchResult", path: "searchResult");
+  static const RouteModel flightDetail = RouteModel(name: "flightDetail", path: "flightDetail");
+  static const RouteModel passengerInformation = RouteModel(name: "passengerInformation", path: "passengerInformation");
+  static const RouteModel addons = RouteModel(name: "addons", path: "addons");
+  static const RouteModel checkout = RouteModel(name: "checkout", path: "checkout");
   static const RouteModel policyHtml = RouteModel(name: "policyHtml", path: "policyHtml");
   static const RouteModel policyWebView = RouteModel(name: "policyWebView", path: "policyWebView");
-  static const RouteModel passengerInformation = RouteModel(name: "passengerInformation", path: "passengerInformation");
 }

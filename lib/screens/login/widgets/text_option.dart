@@ -26,7 +26,7 @@ class AnotherOption extends StatelessWidget {
           style:
               AppTextStyles.base.w400.size14.withColor(AppColors.grayscaleText),
         ),
-        InkWell(
+        GestureDetector(
           onTap: onTap,
           child: Text(
             mainTitle,

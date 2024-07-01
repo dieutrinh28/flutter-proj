@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_proj/models/flight/trip.dart';
-import 'package:flutter_proj/screens/soc/flight/search_flight_result/cubit/search_flight_cubit.dart';
-import 'package:flutter_proj/screens/soc/flight/search_flight_result/widgets/flight_card.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/search_result/cubit/search_flight_cubit.dart';
 import 'package:flutter_proj/screens/soc/flight/widgets/ticket_card.dart';
 
 class SearchFlightResultScreen extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_proj/screens/soc/flight/passenger_information/widget/passenger_button.dart';
-import 'package:flutter_proj/screens/soc/flight/passenger_information/widget/passenger_card.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/passenger_information/widget/passenger_button.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/passenger_information/widget/passenger_card.dart';
 
 class PassengerItem extends StatefulWidget {
   const PassengerItem({super.key});

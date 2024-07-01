@@ -26,7 +26,7 @@ class CoreButton extends StatelessWidget {
     this.borderRadius,
     this.leadingIcon,
     this.trailingIcon,
-    this.iconFontSize = AppDimens.iconSizeNormalSmall,
+    this.iconFontSize = AppDimens.iconSizeSmall,
     this.iconColor = AppColors.baseWhite,
     required this.text,
     this.textColor = AppColors.baseWhite,

@@ -18,28 +18,24 @@ class SocScreen extends StatelessWidget {
           child: Column(
             children: [
               PrimaryButton(
-                  text: "Flight",
-                  onTap: () {
-                    GoRouter.of(context)
-                        .pushNamed(RouteConstants.searchFlightResult.name);
-                  }),
-              PrimaryButton(
-                  text: "Policy Html",
-                  onTap: () {
-                    GoRouter.of(context)
-                        .pushNamed(RouteConstants.policyHtml.name);
-                  }),
-              PrimaryButton(
-                  text: "Policy Web View",
-                  onTap: () {
-                    GoRouter.of(context)
-                        .pushNamed(RouteConstants.policyWebView.name);
-                  }),
-              SecondaryButton(
-                text: "Passenger information",
+                text: "Policy Html",
                 onTap: () {
                   GoRouter.of(context)
-                      .pushNamed(RouteConstants.passengerInformation.name);
+                      .pushNamed(RouteConstants.policyHtml.name);
+                },
+              ),
+              PrimaryButton(
+                text: "Policy Web View",
+                onTap: () {
+                  GoRouter.of(context)
+                      .pushNamed(RouteConstants.policyWebView.name);
+                },
+              ),
+              SecondaryButton(
+                text: "Home",
+                onTap: () {
+                  GoRouter.of(context)
+                      .pushNamed(RouteConstants.flightHome.name);
                 },
               ),
             ].separated(const SizedBox(height: AppDimens.separatedNormal)),

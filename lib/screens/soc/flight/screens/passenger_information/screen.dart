@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_proj/constants/colors.dart';
-import 'package:flutter_proj/screens/soc/flight/passenger_information/widget/passenger_item.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/passenger_information/widget/passenger_item.dart';
 import 'package:flutter_proj/widgets/common/app_bar.dart';
 
 class PassengerInformationScreen extends StatelessWidget {

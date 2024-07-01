@@ -32,8 +32,8 @@ class SearchFlightCubit extends Cubit<SearchFlightState> {
         emit(SearchFlightSuccess(response: data));
       },
       onError: (String? msg) {
-        final fakeData = SearchByCriteria.fromJson(searchFlightData);
-        emit(SearchFlightSuccess(response: fakeData));
+        final mockData = SearchByCriteria.fromJson(searchByCriteriaData);
+        emit(SearchFlightSuccess(response: mockData));
 
         // emit(SearchFlightFailed());
       },

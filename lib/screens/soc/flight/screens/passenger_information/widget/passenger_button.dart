@@ -3,7 +3,7 @@ import 'package:flutter_proj/constants/colors.dart';
 import 'package:flutter_proj/constants/dimens.dart';
 import 'package:flutter_proj/constants/text_styles.dart';
 import 'package:flutter_proj/extensions/list.dart';
-import 'package:flutter_proj/screens/soc/flight/passenger_information/widget/gender_tag.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/passenger_information/widget/gender_tag.dart';
 import 'package:flutter_proj/utils/passenger_type_util.dart';
 
 class PassengerButton extends StatelessWidget {
