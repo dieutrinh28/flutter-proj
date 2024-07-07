@@ -99,4 +99,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get friendList => "Friend list";
+
+  @override
+  String get search => "Search";
 }

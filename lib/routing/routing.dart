@@ -15,7 +15,8 @@ import 'package:flutter_proj/screens/soc/flight/screens/flight_detail/screen.dar
 import 'package:flutter_proj/screens/soc/flight/screens/home/screen.dart';
 import 'package:flutter_proj/screens/soc/flight/screens/passenger_information/screen.dart';
 import 'package:flutter_proj/screens/soc/flight/screens/price_confirm/screen.dart';
-import 'package:flutter_proj/screens/soc/flight/screens/search_result/cubit/search_flight_cubit.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/search_flight/screen.dart';
+import 'package:flutter_proj/screens/soc/flight/screens/search_result/cubit/search_result_cubit.dart';
 import 'package:flutter_proj/screens/soc/flight/screens/search_result/screen.dart';
 import 'package:flutter_proj/screens/soc/policy_html/screen.dart';
 import 'package:flutter_proj/screens/soc/policy_web_view/screen.dart';
@@ -67,12 +68,17 @@ class AppRouter {
                   builder: (context, state) => const FlightHomeScreen(),
                 ),
                 GoRoute(
+                  path: RouteConstants.searchFlight.path,
+                  name: RouteConstants.searchFlight.name,
+                  builder: (context, state) => const SearchFlightScreen(),
+                ),
+                GoRoute(
                   path: RouteConstants.searchResult.path,
                   name: RouteConstants.searchResult.name,
                   builder: (context, state) {
                     return BlocProvider(
                       create: (context) =>
-                      SearchFlightCubit(repository: _flightSearchRepository)
+                      SearchResultCubit(repository: _flightSearchRepository)
                         ..fetchSearchFlight(
                           requestModel: const RequestSearchByCriteria(
                             originLocationCode: "DEL",
@@ -85,7 +91,7 @@ class AppRouter {
                             sorting: "",
                           ),
                         ),
-                      child: const SearchFlightResultScreen(),
+                      child: const SearchResultScreen(),
                     );
                   },
                 ),

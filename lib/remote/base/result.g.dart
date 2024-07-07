@@ -12,7 +12,7 @@ Result<T> _$ResultFromJson<T>(
 ) =>
     Result<T>(
       data: _$nullableGenericFromJson(json['data'], fromJsonT),
-      success: json['success'] as bool,
+      success: json['success'] as bool?,
       error: json['error'] == null
           ? null
           : Error.fromJson(json['error'] as Map<String, dynamic>),
@@ -41,8 +41,8 @@ Object? _$nullableGenericToJson<T>(
     input == null ? null : toJson(input);
 
 Error _$ErrorFromJson(Map<String, dynamic> json) => Error(
-      code: json['code'] as int,
-      message: json['message'] as String,
+      code: json['code'] as int?,
+      message: json['message'] as String?,
     );
 
 Map<String, dynamic> _$ErrorToJson(Error instance) => <String, dynamic>{

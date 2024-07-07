@@ -91,6 +91,8 @@ abstract class AppLocalizations {
   String get myPage;
 
   String get friendList;
+
+  String get search;
 }
 
 class _AppLocalizationsDelegate

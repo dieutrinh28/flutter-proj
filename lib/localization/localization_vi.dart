@@ -99,4 +99,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get friendList => "Danh sách bạn bè";
+
+  @override
+  String get search => "Tìm kiếm";
 }

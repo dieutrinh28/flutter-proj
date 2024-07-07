@@ -6,13 +6,13 @@ import 'package:flutter_proj/models/flight/search_by_criteria.dart';
 import 'package:flutter_proj/remote/base/single_http_request_controller.dart';
 import 'package:flutter_proj/repositories/flight_search_repository.dart';
 
-part 'search_flight_state.dart';
+part 'search_result_state.dart';
 
-class SearchFlightCubit extends Cubit<SearchFlightState> {
+class SearchResultCubit extends Cubit<SearchResultState> {
   final AbstractFlightSearchRepository repository;
   final _singleHttpRequestController = SingleHttpRequestController();
 
-  SearchFlightCubit({required this.repository}) : super(SearchFlightInitial());
+  SearchResultCubit({required this.repository}) : super(SearchResultInitial());
 
   void fetchSearchFlight({
     required RequestSearchByCriteria requestModel,
@@ -25,15 +25,15 @@ class SearchFlightCubit extends Cubit<SearchFlightState> {
   ) {
     _singleHttpRequestController.cancelableFetchData(
       onLoading: () {
-        emit(SearchFlightLoading());
+        emit(SearchResultLoading());
       },
       requestApi: _doGetFlightByCriteria(requestModel),
       onSuccess: (data) {
-        emit(SearchFlightSuccess(response: data));
+        emit(SearchResultSuccess(response: data));
       },
       onError: (String? msg) {
         final mockData = SearchByCriteria.fromJson(searchByCriteriaData);
-        emit(SearchFlightSuccess(response: mockData));
+        emit(SearchResultSuccess(response: mockData));
 
         // emit(SearchFlightFailed());
       },

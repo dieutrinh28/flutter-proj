@@ -18,6 +18,7 @@ class RouteConstants {
 
   // flight
   static const RouteModel flightHome = RouteModel(name: "flightHome", path: "flightHome");
+  static const RouteModel searchFlight = RouteModel(name: "searchFlight", path: "searchFlight");
   static const RouteModel searchResult = RouteModel(name: "searchResult", path: "searchResult");
   static const RouteModel flightDetail = RouteModel(name: "flightDetail", path: "flightDetail");
   static const RouteModel passengerInformation = RouteModel(name: "passengerInformation", path: "passengerInformation");
